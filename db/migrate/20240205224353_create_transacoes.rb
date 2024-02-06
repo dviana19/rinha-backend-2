@@ -4,6 +4,7 @@ class CreateTransacoes < ActiveRecord::Migration[7.1]
       t.integer :valor, null: false
       t.string :tipo, null: false
       t.string :descricao, null: false
+      t.datetime :realizada_em, null: false
       t.references :clientes, foreign_key: true, null: false
     end
   end
