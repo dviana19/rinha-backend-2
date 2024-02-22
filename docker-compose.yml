@@ -6,14 +6,17 @@ services:
     volumes:
       - .:/app
       - shared-volume:/app/storage
+      - sockets:/app/tmp
     hostname: api01
     ports:
       - "3001:3000"
+    # environment:
+    #   - RACK_ENV=production
     deploy:
       resources:
         limits:
           cpus: "0.6"
-          memory: "250MB"
+          memory: "225MB"
 
   api02:
     # Essa sintaxe reusa o que foi declarado em 'api01'.
@@ -26,6 +29,7 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - sockets:/app/tmp
     depends_on:
       - api01
       - api02
@@ -36,7 +40,7 @@ services:
       resources:
         limits:
           cpus: "0.30"
-          memory: "50MB"
+          memory: "100MB"
     # O uso do modo `bridge` deve ser adequado à carga que será usada no teste.
     # A edição anterior se beneficiou do modo host pois o volume de requisições
     # era relativamente alto e a virtualização da rede se tornou um gargalo, mas
@@ -47,5 +51,7 @@ networks:
   default:
     driver: bridge
     name: rinha-nginx-2024q1
+
 volumes:
   shared-volume:
+  sockets:

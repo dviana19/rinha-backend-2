@@ -25,12 +25,13 @@ GEM
       ruby2_keywords
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    minitest (5.22.0)
+    minitest (5.22.2)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.2.0)
     nio4r (2.7.0)
+    pg (1.5.4)
     puma (6.4.2)
       nio4r (~> 2.0)
     rack (3.0.9)
@@ -60,11 +61,6 @@ GEM
       sinatra (= 4.0.0)
       tilt (~> 2.0)
     sqlite3 (1.7.2-aarch64-linux)
-    sqlite3 (1.7.2-arm-linux)
-    sqlite3 (1.7.2-arm64-darwin)
-    sqlite3 (1.7.2-x86-linux)
-    sqlite3 (1.7.2-x86_64-darwin)
-    sqlite3 (1.7.2-x86_64-linux)
     tilt (2.3.0)
     timeout (0.4.1)
     tzinfo (2.0.6)
@@ -73,13 +69,9 @@ GEM
 
 PLATFORMS
   aarch64-linux
-  arm-linux
-  arm64-darwin
-  x86-linux
-  x86_64-darwin
-  x86_64-linux
 
 DEPENDENCIES
+  pg
   puma
   rackup
   rake

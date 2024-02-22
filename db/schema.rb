@@ -22,9 +22,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_224353) do
     t.string "tipo", null: false
     t.string "descricao", null: false
     t.datetime "realizada_em", null: false
-    t.integer "clientes_id", null: false
-    t.index ["clientes_id"], name: "index_transacoes_on_clientes_id"
+    t.integer "cliente_id", null: false
+    t.index ["cliente_id"], name: "index_transacoes_on_cliente_id"
   end
 
-  add_foreign_key "transacoes", "clientes", column: "clientes_id"
 end
