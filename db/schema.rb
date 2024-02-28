@@ -26,4 +26,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_224353) do
     t.index ["cliente_id"], name: "index_transacoes_on_cliente_id"
   end
 
+  add_foreign_key "transacoes", "clientes"
 end

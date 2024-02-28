@@ -11,3 +11,4 @@ Things you may want to cover:
 * System dependencies
 Sinatra e SQLite
 
+# docker buildx build --platform linux/amd64

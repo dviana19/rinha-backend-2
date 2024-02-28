@@ -1,6 +1,6 @@
 class Transacao < ActiveRecord::Base
   self.table_name = 'transacoes'
-  belongs_to :cliente, class_name: 'Cliente'#, foreign_key: 'cliente_id', primary_key: 'id'
+  belongs_to :cliente, class_name: 'Cliente'
 
   validates_presence_of :valor, :tipo, :descricao, :cliente_id
   validates :valor, numericality: { only_integer: true, greater_than: 0 }

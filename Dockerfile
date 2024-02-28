@@ -20,6 +20,6 @@ RUN bundle install
 COPY . .
 
 EXPOSE 3000
-# ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
+ENTRYPOINT ["sh", "./docker-entrypoint.sh"]
 #ENTRYPOINT [ "./docker-entrypoint" ]
 CMD ["bundle", "exec", "puma"]
