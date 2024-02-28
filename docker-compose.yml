@@ -1,8 +1,10 @@
 version: "3.5"
 
 services:
-  api01: &api
-    build: .
+  api01:
+    #build: .
+    &api
+    image: diogoviana/rinhadebackend
     volumes:
       - .:/app
       - shared-volume:/app/storage
