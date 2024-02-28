@@ -1,6 +1,6 @@
 # README
-## [@dviana19](https://twitter.com/dviana19) - twitter
-## [repo](https://github.com/dviana19/rinha-backend-2)
+#### twitter - [@dviana19](https://twitter.com/dviana19)
+#### repo - [repo](https://github.com/dviana19/rinha-backend-2)
 
 ## Stack
 - `nginx`
