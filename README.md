@@ -1,14 +1,9 @@
 # README
+## [@dviana19](https://twitter.com/dviana19) - twitter
+## [repo](https://github.com/dviana19/rinha-backend-2)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-3.2.2
-
-* System dependencies
-Sinatra e SQLite
-
-# docker buildx build --platform linux/amd64
+## Stack
+- `nginx`
+- `ruby 3.2.2`
+- `sinatra`
+- `SQLite`
